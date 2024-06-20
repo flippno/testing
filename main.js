@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     venus.scene.scale.set(0.1, 0.1, 0.1);
     venus.scene.position.set(0, -0.4, 0);
 
-    const earthAnchor = mindarThree.addAnchor(0);
-    earthAnchor.group.add(earth.scene);
+    // const earthAnchor = mindarThree.addAnchor(0);
+    // earthAnchor.group.add(earth.scene);
 
     const venusAnchor = mindarThree.addAnchor(7);
     venusAnchor.group.add(venus.scene);
