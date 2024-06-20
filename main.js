@@ -1,23 +1,23 @@
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
-import {loadGLTF} from "../libs/loader.js";
+import {loadGLTF} from "./libs/loader.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const start = async() => {
     const mindarThree = new MindARThree({
       container: document.body,
-      imageTargetSrc: '../assets/targets/planets.mind'
+      imageTargetSrc: './assets/targets/planets.mind'
     });
     const {renderer, scene, camera} = mindarThree;
 
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
 
-    const earth = await loadGLTF('../assets/models/planets/Earth.glb');
+    const earth = await loadGLTF('./assets/models/planets/Earth.glb');
     earth.scene.scale.set(0.1, 0.1, 0.1);
     earth.scene.position.set(0, -0.4, 0);
 
-    const venus = await loadGLTF('../assets/models/planets/Venus.glb');
+    const venus = await loadGLTF('./assets/models/planets/Venus.glb');
     venus.scene.scale.set(0.1, 0.1, 0.1);
     venus.scene.position.set(0, -0.4, 0);
 
