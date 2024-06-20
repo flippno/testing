@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     earth.scene.scale.set(0.1, 0.1, 0.1);
     earth.scene.position.set(0, -0.4, 0);
 
-    const venus = await loadGLTF('./assets/models/planets/Venus.glb');
+    const venus = await loadGLTF('./assets/models/planets/venus/scene.gltf');
     venus.scene.scale.set(0.1, 0.1, 0.1);
     venus.scene.position.set(0, -0.4, 0);
 
