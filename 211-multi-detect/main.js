@@ -1,9 +1,10 @@
+import * as THREE from 'three';
+import { MindARThree } from 'mindar-image-three';
 import {loadGLTF} from "../libs/loader.js";
-const THREE = window.MINDAR.IMAGE.THREE;
 
 document.addEventListener('DOMContentLoaded', () => {
   const start = async() => {
-    const mindarThree = new window.MINDAR.IMAGE.MindARThree({
+    const mindarThree = new MindARThree({
       container: document.body,
       imageTargetSrc: '../assets/targets/planets.mind'
     });
