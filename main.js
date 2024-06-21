@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // earth.scene.scale.set(0.1, 0.1, 0.1);
     // earth.scene.position.set(0, -0.4, 0);
 
-    const venus = await loadGLTF('./assets/models/musicband-raccoon/scene.gltf');
-    venus.scene.scale.set(0.1, 0.1, 0.1);
-    venus.scene.position.set(0, -0.4, 0);
+    const raccoon = await loadGLTF('./assets/models/musicband-raccoon/scene.gltf');
+    raccoon.scene.scale.set(0.1, 0.1, 0.1);
+    raccoon.scene.position.set(0, -0.4, 0);
 
     // const earthAnchor = mindarThree.addAnchor(0);
     // earthAnchor.group.add(earth.scene);
 
-    const venusAnchor = mindarThree.addAnchor(7);
-    venusAnchor.group.add(venus.scene);
+    const raccoonAnchor = mindarThree.addAnchor(0);
+    raccoonAnchor.group.add(raccoon.scene);
 
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
